@@ -99,29 +99,12 @@ nav {
   }
 }
 
-@media (max-width: 500px) {
-  .github-corner:hover .octo-arm {
-    animation: none;
-  }
-
-  .github-corner .octo-arm {
-    animation: octocat-wave 560ms ease-in-out;
-  }
-}
-
 #intro {
   margin-bottom: 320px;
 }
 
 #outro {
   height: 640px;
-}
-
-@media (min-width: 840px) {
-  .nav__examples {
-    margin-top: 0;
-    margin-left: 2rem;
-  }
 }
 
 .initial-state{
@@ -134,9 +117,9 @@ nav {
 
 #scrolly {
     position: relative;
-    display: -webkit-box;
+/*     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: flex; */
     background-color: #f3f3f3;
     padding: 1rem;
   }
@@ -149,24 +132,40 @@ nav {
 
   article {
     position: relative;
-    padding: 0 1rem;
-    max-width: 20rem;
+    padding: 1rem 0rem;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
-  #sticky-figs {
+  .allfigs {
     position: -webkit-sticky;
     position: sticky;
+    display: flex;
     width: 100%;
-    Top: 0;
-    height: 90%; 
+    height: 250px;
     margin: 0;
+    top: 0px !important;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
-    transform: translate3d(1, 0, 0);
-    background-color: #ffffff;
-    z-index: 0;
+    transform: translate3d(0, 0, 0);
+    background-color: #8a8a8a;
+    z-index: 1;
   }
 
+  .timelines {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+  }
+  
+  .timelines p{
+    padding: 1rem;
+   font-size: 2rem;
+    font-weight: 100;
+    color: #fff; 
+  
+  }
+/* 
   #timeline-figure{
     width: 100%;
     margin: 0px;
@@ -177,15 +176,7 @@ nav {
     width: 100%;
     margin: 0px;
     z-index: 0;
-}
-
-  #body-text {
-    align-self: center;
-    align-content: center;
-    width: 50%;
-    background-color: #5db47a;
-    z-index: 0;
-  }
+} */
 
   .activate-sequence{
     fill-opacity: 0.8 !important;
@@ -195,38 +186,32 @@ nav {
     opacity: 0.8 !important;
   }
 
-
-  figure p {
-    text-align: center;
-    padding: 1rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    font-size: 1rem;
-    font-weight: 900;
-    color: black;
-  }
-
-  .step {
+  .step{
     margin: 0 auto 2rem auto;
+    width: 100%;
     background-color: #3b3b3b;
     color: #fff;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
   }
-
+  
   .step:last-child {
     margin-bottom: 0;
   }
-
-  .step.is-active {
+  
+  .step p {
+    text-align: left;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .step h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  
+  .step.is-active h2{
     background-color: goldenrod;
     color: #3b3b3b;
-  }
-
-  .step p {
-    text-align: center;
-    padding: 1rem;
-    font-size: 1.5rem;
   }

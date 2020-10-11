@@ -95,7 +95,6 @@ function addEvent(start, end, seq, eventTitle, seqDesc){
 
 // console.log(events);
 
-
 // MILESTONE TIMELINE
 var milestoneEvents = []
 
@@ -127,8 +126,9 @@ addEvent("1866", "1868", 1, "KKK", "the South POV");
 addMilEvent("1877", "Rutheford elected", "the South POV"); 
 addMilEvent("1877", "Northern troops leave the South", "the South POV"); 
 
-// DRAW SEGMENT TIMELINE 
 color_legend = ["#3F84E5", "#B20D30", "#C17817", "#3F784C"]
+
+// DRAW SEGMENT TIMELINE 
 
 TimelinesChart()(document.getElementById("timeline-figure"))
       .data(events)

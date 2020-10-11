@@ -4,8 +4,8 @@
 var main = d3.select("main");
 var scrolly = main.select("#scrolly");
 // TODO: RENAME 
-var figure = scrolly.select("#timeline-figure");
-var figure2 = scrolly.select("#milestone-figure");
+var figure = scrolly.select(".timeline-figure");
+var figure2 = scrolly.select(".milestone-figure");
 var body_text = scrolly.select("#body-text");
 var article = scrolly.select("article");
 var figure = d3.select("#timeline-figure");
@@ -97,7 +97,7 @@ function init() {
     scroller
         .setup({
         step: "#scrolly article .step",
-        offset: 0.2,
+        offset: 0.55,
         debug: true
         })
         .onStepEnter(handleStepEnter);
