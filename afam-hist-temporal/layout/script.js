@@ -1,7 +1,10 @@
+
 // using d3 for convenience
       var main = d3.select("main");
       var scrolly = main.select("#scrolly");
-      var figure = scrolly.select("figure");
+      // var figure = scrolly.select("figure");
+      var timelines = scrolly.selectAll(".timelines > *");
+      var illustration = scrolly.select(".illustration");
       var article = scrolly.select("article");
       var step = article.selectAll(".step");
 
@@ -17,7 +20,7 @@
         var figureHeight = window.innerHeight / 2;
         var figureMarginTop = (window.innerHeight - figureHeight) / 2;
 
-        figure
+        timelines
           .style("height", figureHeight + "px")
           .style("top", figureMarginTop + "px");
 
@@ -36,8 +39,9 @@
           return i === response.index;
         });
 
-        // update graphic based on step
-        figure.select("p").style("color",colors[response.index]);
+        // update graphics based on step
+        timelines.select("p").style("color",colors[response.index]);
+        illustration.select("p").style("color",colors[response.index])
       }
 
       function setupStickyfill() {
